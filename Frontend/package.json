@@ -1,0 +1,18 @@
+{
+  "name": "gakuo-transactions-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for Mock MPesa Transactions API by Gakuo",
+  "main": "router.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "*",
+    "nodemailer": "^4.6.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node router.js"
+  },
+  "author": "Kelvin Gakuo",
+  "license": "WTFPL"
+}

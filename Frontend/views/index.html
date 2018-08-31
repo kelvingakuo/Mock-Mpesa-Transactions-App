@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Gakuo Mpesa Transactions</title>
+      <!-- Meta tags -->
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+      <link href=" /parent/public/child/css/file/index/type/css" rel='stylesheet' type='text/css' media="all">
+      <link href="//fonts.googleapis.com/css?family=Barlow:300,400,500" rel="stylesheet">
+
+      <script type="text/javascript">
+         window.onload = checkLogin;
+         function checkLogin(){
+            if(sessionStorage.getItem('token')){
+               window.location = '/profile';
+            }else{
+
+            }
+         }
+
+      </script>
+
+
+   </head>
+   <body ng-app="apiApp" ng-controller="apiCtrl">
+      <h1 class="header-w3ls">
+        Mpesa Transactions
+      </h1>
+      <div class="art-bothside">
+         <div class="sap_tabs">
+            <div id="horizontalTab">
+               <ul class="resp-tabs-list">
+                  <li class="resp-tab-item"><span>Login</span></li>
+                  <li class="resp-tab-item"><span>Sign Up</span></li>
+               </ul>
+               <div class="clearfix"> </div>
+               <div class="resp-tabs-container">
+                  <div class="tab-1 resp-tab-content">
+                     <div class="swm-right-w3ls">
+                        <form ng-submit="login()" name="logForm">
+                           <div class="main">
+                              <div class="icon-head-wthree">
+                                 <h2>Login</h2>
+                              </div>
+                              <div class="form-left-w3l">
+                                 <input type="text" name="phone" placeholder="phone number" required="" ng-model="loginPhone">
+                              </div>
+                              <div class="form-right-w3ls ">
+                                 <input type="password" name="password" placeholder="Password" required="" ng-model="loginPass">
+                              </div>
+                              <div class="btnn">
+                                 <button type="submit" class="load col-sm-12" ng-disabled="logForm.$invalid">LogIn</button><br>
+                              </div>
+                              <div class="logResp">
+                                 {{logResponse | uppercase}}
+                              </div>  
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+                  <div class="tab-1 resp-tab-content">
+                     <div class="swm-left-w3ls">
+                        <form ng-submit="signUp()" name="signForm">
+                           <div class="main">
+                              <div class="icon-head-wthree">
+                                 <h2>Sign Up</h2>
+                              </div>
+                              <div class="form-left-to-w3l">
+                                 <input type="text" name="name" placeholder="Name" required="" ng-model="signName">
+                              </div>
+                              <div class="form-left-w3l">
+                                 <input type="email" name="email" placeholder="Email" required="" ng-model="signEmail">
+                              </div>
+                              <div class="form-left-to-w3l">
+                                 <input type="text" name="phone" placeholder="Phone number" required="" ng-model="signPhone">
+                              </div>
+                              <div class="form-right-w3ls ">
+                                 <input type="password" name="password" placeholder="Password" required="" ng-model="signPass">
+                              </div>
+                              <div class="btnn">
+                                 <button type="submit" class="load" ng-disabled="signForm.$invalid">Sign Up</button><br>
+                              </div>
+
+                              <div class="signResp">
+                                 {{signResponse | uppercase}}
+                              </div>   
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--js working-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.5/dist/loadingoverlay.min.js"></script>
+      <script src="/parent/public/child/js/file/easyResponsiveTabs/type/js"></script>
+      <script src="/parent/public/child/js/file/effects/type/js"></script>
+      <script src="/parent/public/child/js/file/index/type/js"></script>
+   </body>
+</html>

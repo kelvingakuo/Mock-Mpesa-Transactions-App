@@ -1,0 +1,23 @@
+.fa{
+	margin-left:5%;
+	margin-right: 5%;
+	color: #f47721;
+}
+.btn{
+	background-color: #f47721;
+}
+
+.badge{
+	font-size: 50%;
+	margin-bottom: 1%;
+}
+
+#bal{
+	margin-top: 1%;
+}
+
+.alert, .navbar-custom, input, button{
+	border-radius: 0 !important;
+	font-weight: bolder;
+	font-size: 18px;
+}

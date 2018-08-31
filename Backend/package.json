@@ -1,0 +1,22 @@
+{
+  "name": "gakuo-transactions-api",
+  "version": "1.0.0",
+  "description": "Mock MPesa Transacations API by Gakuo",
+  "main": "server.js",
+  "dependencies": {
+    "express":"*",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "jsonwebtoken": "^8.3.0",
+    "mongodb": "^2.2.34",
+    "nodemailer": "^4.6.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Kelvin Gakuo",
+  "license": "WTFPL"
+}
