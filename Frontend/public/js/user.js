@@ -37,7 +37,7 @@ app.controller('usCtrl', function($scope, $http, $window){
 
 
 	$scope.report = function(){
-		$scope.info = "Executing....";
+		$scope.info = "Generating report....";
 		var tar = $scope.genMail;
 		var start = $scope.startDt;
 		var end = $scope.endDt;
@@ -62,8 +62,8 @@ app.controller('usCtrl', function($scope, $http, $window){
 					data: rep,
 					headers:{'Content-Type': 'application/json'}
 				}).then(function successResp(response){
+					$scope.info = response.data.message;
 				}, function errorResp(response){
-					if(response.data.status == 200) $scope.info = response.data.message;
 				});
 			}	
 
