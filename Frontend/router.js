@@ -47,7 +47,7 @@ app.post('/report', function(req, res){
 	var email =req.body['email'];
 
 	var content = data.reduce(function(a,b){
-		return a+ '<tr> <td>'+b.trans.type+'</td> <td>'+b.trans.date+'</td> <td>'+b.trans.sender+'</td> <td>'+b.trans.receiver+'</td> <td>'+b.trans.amount+'</td> <tr>';
+		return a+ '<tr> <td>	'+b.trans.type+'	</td> <td>	'+b.trans.date+'	</td> <td>	'+b.trans.sender+'	</td> <td>	'+b.trans.receiver+'	</td> <td>	'+b.trans.amount+'	</td> <tr>	';
 	}, '');
 	
 	//Nodemailer report here
@@ -55,13 +55,13 @@ app.post('/report', function(req, res){
 		from:'gakuozetech@gmail',
 		to: email,
 		subject: 'TRANSACTIONS REPORT',
-		html: '<h1>'+username+' TRANSACTIONS REPORT</h1> <table> <thead> <th>Type</th> <th>Date</th> <th>Sender</th> <th>Receiver</th> <th>Amount</th> </thead> <tbody>'+ content +' </tbody> </table> '
+		html: '<h1>'+email+' TRANSACTIONS REPORT</h1> <table> <thead> <th>Type</th> <th>Date</th> <th>Sender</th> <th>Receiver</th> <th>Amount</th> </thead> <tbody>'+ content +' </tbody> </table> '
 	};
 
 	transporter.sendMail(mailOptions, function(err, info){
 		if(err) throw err;
 		console.log(info);
-		res.send({'status':200, 'message':'Report sent. Check email'+email});
+		res.send({'status':200, 'message':'Report sent. Check email '+email});
 	});
 	
 

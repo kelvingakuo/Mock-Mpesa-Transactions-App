@@ -223,7 +223,7 @@ app.post('/api/user/report/startDate/:begin/endDate/:end', function(req, res){
 			db.collection('customers').findOne({email:email}, function(err, docs){
 				if(err) throw err;
 				if(!docs){
-					res.send({'status':402, 'message':'User does not exist'});
+					res.send({'status':400, 'message':'User does not exist'});
 				}else{
 					phone = docs.phoneNumber;
 					db.collection('transactions').find({
