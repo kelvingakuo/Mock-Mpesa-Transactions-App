@@ -4,45 +4,45 @@
 
 <h2>Overview:</h2>
 <ul>
-	
-		1. Frontend<br> 
+	<li>
+		Frontend<br>
 		An implementation of a web app consuming the REST API.<br>
 		The app is built using:<br>
 		<ul>
 			<li>AngularJS 1.5 - Views</li>
 			<li>ExpressJS - Routing</li>
 		</ul>
-	
-	
-		2. Backend<br>
+	</li>
+	<li>
+		Backend<br>
 		And implementation of the API.<br>
 		The API is built using:
 		<ul>
 			<li>MongoDB - Persistence of data</li>
 			<li>ExpressJS - Routing</li>
-		</ul>
-	
+	</li>
 </ul>
 
 
 <h2>Installation</h2>
 <ul>
-	1. Frontend
+	<li>Frontend<br>
 		<code>cd Frontend/</code><br>
 		<code>npm install</code><br>
 		<code> nodemon start</code><br>
-	
+	</li>
 
-	2. Backend<br>
+	<li>Backend<br>
 		<code>cd Backend/</code><br>
 		<code>npm install</code><br>
 		<code>nodemon start</code><br>
+	</li>
 </ul>
 
 
 <h2>Directory structure</h2>
 <ul>
-	1. Frontend<br>
+	<li>Frontend<br>
 		<ul>
 			<li>package.json - App description, dependencies etc</li>
 			<li>/router.js - The entry point</li>
@@ -50,15 +50,15 @@
 			<li>/views - HTML files served by router.js</li>
 			<li>/public - Assets e.g JS files</li>
 		</ul>
-	
+	</li>
 
-	2. Backend<br>
+	<li>Backend<br>
 		<ul>
 			<li>package.json - App description, dependencies etc</li>
 			<li>/server.js - The entry point</li>
 			<li>/package-lock.json - Comprehensive list of dependencies</li>
 		</ul>
-	
+	</li>
 </ul>
 
 
