@@ -39,6 +39,7 @@ app.controller('proCtrl', function($scope, $http, $window){
 
 
 	$scope.topup = function(){
+		$scope.info = "Executing....";
 		var amount = parseInt($scope.amt);
 
 		var top = url+'user/topup';
@@ -52,7 +53,8 @@ app.controller('proCtrl', function($scope, $http, $window){
 			}).then(function successResp(response){
 				var stat = parseInt(response.data.status);
 				if(stat == 200){
-					alert(response.data.message);
+					$scope.info = response.data.message;
+
 					$scope.balance = response.data.balance;
 					setBalanceLevel(response.data.balance);
 				}
@@ -65,6 +67,7 @@ app.controller('proCtrl', function($scope, $http, $window){
 
 
 	$scope.transact =function(){
+		$scope.info = "Executing....";
 		var recep = $scope.recep;
 		var amt = parseInt($scope.pesa);
 
@@ -79,16 +82,22 @@ app.controller('proCtrl', function($scope, $http, $window){
 			}).then(function successResp(response){
 				var stat = parseInt(response.data.status);
 				if(stat == 200){
-					alert(response.data.message);
+					$scope.info = response.data.message;
 					$scope.balance = response.data.balance;
 					setBalanceLevel(response.data.balance);
 				}else{
-					alert(response.data.message);
+					$scope.info = response.data.message;
 				}
 			},function errorResp(response){
 				alert(response);
 			});
 
+	}
+
+
+	$scope.logout = function(){
+		$window.sessionStorage.clear();
+		$window.location ='/';
 	}
 
 

@@ -23,6 +23,7 @@
 
 <body ng-app="usApp" ng-controller="usCtrl">
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark content-right navbar-custom">
+		<a class="navbar-brand" href="/profile"><i class="fa fa-sign-out 2x"></i></a>
 		<div class="container justify-content-end">
 		  <ul class="navbar-nav links">
 		  	<li>
@@ -63,6 +64,12 @@
 		<div id="bal" class="alert">
 			BALANCE: {{balance}} KSH
 		</div>
+
+		<div class="alert alert-info" ng-if="info.length>0">
+			ALERT: {{info}}
+		</div>
+
+
 
 		<h2>GENERATE TRANSACTIONS REPORT</h2>
 		<form name="emailForm">

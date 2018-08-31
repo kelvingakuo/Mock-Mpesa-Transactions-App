@@ -41,7 +41,6 @@ app.get('/notifications', function(req, res){
 })
 
 
-
 app.post('/report', function(req, res){
 	var data = req.body['report'];
 	var email =req.body['email'];

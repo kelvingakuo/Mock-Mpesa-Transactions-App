@@ -37,6 +37,7 @@ app.controller('usCtrl', function($scope, $http, $window){
 
 
 	$scope.report = function(){
+		$scope.info = "Executing....";
 		var tar = $scope.genMail;
 		var start = $scope.startDt;
 		var end = $scope.endDt;
@@ -53,7 +54,7 @@ app.controller('usCtrl', function($scope, $http, $window){
 			report = response.data.report;
 			rep = {'report':report, 'email':tar};
 			if(response.data.status !=200){
-				alert(response.data.message);
+				$scope.info = response.data.message;
 			}else{
 				$http({
 					method:'POST',
@@ -62,7 +63,7 @@ app.controller('usCtrl', function($scope, $http, $window){
 					headers:{'Content-Type': 'application/json'}
 				}).then(function successResp(response){
 				}, function errorResp(response){
-					if(response.data.status == 200) alert(response.data.message);
+					if(response.data.status == 200) $scope.info = response.data.message;
 				});
 			}	
 
