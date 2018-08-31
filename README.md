@@ -1,22 +1,21 @@
 <h1>MOCK MPESA TRANSACTIONS APP</h1>
 
-<p>An app built to consume the Transactions REST API documented here: bit.ly/gakuoapidoc</p>
+<p>An app built to consume the Transactions REST API documented here: <a href="http://bit.ly/gakuoapidoc">http://bit.ly/gakuoapidoc</a></p>
 
 <h2>Overview:</h2>
 <ul>
 	<li>
-		Frontend
-		An implementation of a web app consuming the REST API.
-		The app is built using:
+		Frontend<br>
+		An implementation of a web app consuming the REST API.<br>
+		The app is built using:<br>
 		<ul>
 			<li>AngularJS 1.5 - Views</li>
 			<li>ExpressJS - Routing</li>
 		</ul>
-
 	</li>
 	<li>
-		Backend
-		And implementation of the API.
+		Backend<br>
+		And implementation of the API.<br>
 		The API is built using:
 		<ul>
 			<li>MongoDB - Persistence of data</li>
@@ -27,23 +26,23 @@
 
 <h2>Installation</h2>
 <ul>
-	<li>Frontend
-		<code>cd Frontend/</code>
-		<code>npm install</code>
-		<code> nodemon start</code>
+	<li>Frontend<br>
+		<code>cd Frontend/</code><br>
+		<code>npm install</code><br>
+		<code> nodemon start</code><br>
 	</li>
 
-	<li>Backend
-		<code>cd Backend/</code>
-		<code>npm install</code>
-		<code>nodemon start</code>
+	<li>Backend<br>
+		<code>cd Backend/</code><br>
+		<code>npm install</code><br>
+		<code>nodemon start</code><br>
 	</li>
 </ul>
 
 
 <h2>Directory structure</h2>
 <ul>
-	<li>Frontend
+	<li>Frontend<br>
 		<ul>
 			<li>package.json - App description, dependencies etc</li>
 			<li>/router.js - The entry point</li>
@@ -53,7 +52,7 @@
 		</ul>
 	</li>
 
-	<li>Backend
+	<li>Backend<br>
 		<ul>
 			<li>package.json - App description, dependencies etc</li>
 			<li>/server.js - The entry point</li>
