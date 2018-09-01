@@ -66,3 +66,16 @@ Usage
 -----
 
 Both the frontend and backend are on [Heroku](https://www.heroku.com/). The app can be accesed via:[http://bit.ly/gakuowebapp](http://bit.ly/gakuowebapp)
+
+## Authors
+
+* **Kelvin Gakuo** 
+
+## License
+
+This project is licensed under the WTFPL License 
+
+## Acknowledgments
+
+* The internet
+* General awesomeness of humanity
